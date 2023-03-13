@@ -1,0 +1,23 @@
+.t {
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-end {
+    text-align: end;
+  }
+  &-justify {
+    text-align: justify;
+  }
+}
+
+.text-error {
+  margin-top: 4px;
+  color: var(--error-color);
+  font-size: 1.2rem;
+}

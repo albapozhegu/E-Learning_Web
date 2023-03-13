@@ -1,0 +1,10 @@
+announcement
+blog
+books
+comments
+events
+faq
+forum
+job
+podcast
+stories

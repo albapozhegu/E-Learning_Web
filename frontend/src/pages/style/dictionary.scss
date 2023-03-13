@@ -1,0 +1,840 @@
+body{
+    font-family: promt;
+}
+.dictionary-content{
+    max-width: 1170px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+.dictionary-welcome{
+    margin: auto;
+
+    max-width: 930px;
+    padding: 20px 15px;
+}
+
+.dictionary-welcome .dictionary-welcome-left{
+   width: 130px;
+    height: 120px;
+    float: left;
+}
+
+.dictionary-welcome .dictionary-welcome-left img{
+    height: 100%;
+}
+.dictionary-welcome-right{
+    float: left;
+    width: calc(100% - 130px);
+    padding-left: 60px;
+    padding-top: 10px;
+}
+.dictionary-welcome-right h1{
+    margin: 0;
+    font-size: 20px;
+    color: var(--color-text-dark);
+    font-family: promtbold;
+}
+.dictionary-welcome-right h2{
+    font-size: 15px;
+    margin: 15px 0px 0px;
+    color: var(--color-text);
+    max-width: 440px;
+    font-family: promtmedium;
+}
+.dictionary-welcome-right .button-group{
+    margin-top: 70px;
+}
+.dictionary-welcome-right .button-group .btn-testing{
+    color: var(--color-green);
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.dictionary-welcome-right .button-group .btn-learning{
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-left: 10px;
+    background: var(--color-green);
+    border-color: var(--color-border-green);
+}
+.dictionary-welcome-right .btn-see-more{
+    font-size: 15px;
+    color: var(--color-blue);
+    font-family: promtmedium;
+    display: inline-block;
+    margin-top: 10px;
+}
+.dictionary-welcome-right .btn-see-more:hover{
+    text-decoration: none;
+    color: var(--color-blue-deep);
+}
+.dictionary-body{
+    max-width: 930px;
+    padding: 20px 15px;
+    margin: auto;
+}
+
+.dictionary-form form{
+    position: relative;
+    height: 80px;
+    margin: 0;
+}
+.dictionary-form form input[type="text"]{
+    display: block;
+    width: 100%;
+ 
+    height: 80px;
+    border-radius: 10px;
+    border: 2px solid var(--color-border-gray-light);
+    background: var(--color-white);
+    padding-left: 80px;
+    font-size: 17px;
+    font-family: promtmedium;
+    color: var(--color-text);
+}
+.dictionary-form form input[type="text"]:focus{
+    outline: none;
+    border-color: var(--color-blue);
+}
+.dictionary-form form input[type="text"]::placeholder{
+    color: var(--color-text-light);
+}
+.dictionary-form form img{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+.dictionary-form form button{
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    background: var(--color-green);
+    text-transform: uppercase;
+    color: var(--color-white);
+    border: 1px soli var(--color-border-green);
+    border-bottom: 3px solid var(--color-border-green);
+    font-size: 15px;
+    font-family: promtsemibold;
+}
+.dictionary-form form button:focus{
+    outline: none;
+}
+.dictionary-result{
+    margin-top: 35px;
+}
+.dictionary-result-content h3{
+    font-size: 17px;
+    font-family: promtsemibold;
+    color: var(--color-text-light);
+}
+.result-content{
+    margin-top: 15px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--color-border-gray-light);
+}
+.result-content .word{
+    display: inline-block;
+    font-size: 34px;
+    font-family: promtbold;
+    margin-right: 15px; 
+    text-transform: capitalize;
+}
+.result-content .pronounce{
+    font-size: 17px;
+    color: var(--color-blue);
+    font-family: promtmedium;
+    margin-right: 10px;
+}
+.result-content .sound{
+    display: inline-block;
+    width: 60px;
+    height: 37px;
+    line-height: 37px;
+    color: var(--color-text);
+    text-align: right;
+    font-size: 15px;
+    font-family: promtmedium;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.result-content .sound i{
+    display: inline-block;
+    width: 31px;
+    height: 32px;
+    background: url(../images/voca-bg.svg) 0px -1010px;
+    margin-top: 2px;
+}
+.result-content .sound.uk i{
+    background-position: 0px -1050px;
+}
+.result-content .sound span{
+    float: right;
+    margin-left: 5px;
+}
+.result-content .sperator{
+    width: 1px;
+    height: 37px;
+    background: var(--color-border-gray-light);
+    display: inline-block;
+    margin-right: 20px;
+}
+.result-content .sound:hover{
+    cursor: pointer;
+}
+.result-content .pin{
+    display: inline-block;
+
+}
+.result-content .pin:hover{
+    cursor: pointer;
+}
+.result-content .pin i{
+    width: 41px;
+    height: 42px;
+    display: inline-block;
+    background: url(../images/voca-bg.svg) 0px -1090px;
+}
+.result-table{
+    border: 2px solid var(--color-border-gray);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.result-table table{
+    width: 100%;
+    border: 0;
+    min-width: 800px;
+}
+.result-table table thead th{
+    height: 70px;
+    padding-left: 20px;
+    font-weight: 400;
+    font-family: promtmedium;
+    font-size: 18px;
+    color: var(--color-text);
+    padding-right: 20px;
+    width: 20%;
+}
+.result-table table thead th.word{
+    width: 25%;
+}
+.result-table table thead th.word-form{
+    width: 15%;
+}
+.result-table table thead th.sample{
+    width: 40%;
+}
+.result-table table tbody td{
+    padding: 0px 20px;
+    height: 110px;
+    border: 1px solid var(--color-border-gray-light);
+    font-size: 17px;
+    color: var(--color-text-light);
+    font-family: promtmedium;
+    position: relative;
+}
+.result-table table tbody td.word{
+    color: var(--color-text-dark);
+    font-family: promtbold;
+    
+}
+.result-table table tbody td.sample{
+    color: var(--color-text);
+    padding-right: 90px;
+}
+.result-table table tbody td.sample a{
+    display: inline-block;
+    width: 56px;
+    height: 26px;
+    font-size: 15px;
+    font-family: promtmedium;
+    text-align: center;
+    color: var(--color-blue);
+    position: absolute;
+    bottom: 42px;
+    right: 15px;
+}
+.result-table table tbody td.sample a:hover{
+    text-decoration: none;
+}
+.result-relate{
+    margin-top: 30px;
+}
+.result-relate h3{
+    font-size: 20px;
+    color: var(--color-text-dark);
+	padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border-gray-light);
+}
+
+.result-table table tbody td.word i{
+    display: inline-block;
+    width: 33px;
+    height: 31.173px;
+    background: url(../images/voca-bg.svg) 0px -800px;
+    transform: scale(0.5);
+    float: left;
+    margin-top: -3px;
+}
+
+.d-word{
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid var(--color-border-gray-light);
+}
+.word-left{
+    width: 40px;
+    min-height: 60px;
+    float: left;
+}
+.word-left a{
+    width: 24.928px;
+    height: 24.928px;
+    display: block;
+    background: url(../images/voca-bg.svg) 0px -2740px;
+    margin-top: 20px;
+}	
+		
+.word-left a:hover{
+    background-position: 0px -2770px;
+}
+.word-right{
+    width: calc(100% - 40px);
+    min-height: 60px;
+    float: left;
+    font-size: 17px;
+    vertical-align: middle;
+    padding-top: 15px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+.d-pronounce{
+    float: left;
+    width: 100%;
+    padding-bottom: 10px
+}
+.d-pronounce div{
+    float: left;
+    width: 100%;
+}
+.d-pronounce .sound{
+    display: block;
+    width: 16.333px;
+    height: 15.246px;
+    background: url(../images/voca-bg.svg) 0px -1500px;
+    margin-top: 10px;
+    float: left;
+    margin-right: 23px;
+}
+.d-pronounce .sound.uk{
+    display: block;
+    width: 16.333px;
+    height: 15.246px;
+    background-position: 0px -1520px;
+}
+.d-pronounce span{
+    display: block;
+    font-size: 17px;
+    color: var(--color-text-light);
+    font-family: promt;
+    margin-top: 5px;
+    float: left;
+    width: calc(100% - 40px);
+}
+.d-pronounce span.pronounce-uk{
+    margin-top: 0px;
+}
+.hint-word{
+    display: block;
+    color: var(--color-blue);
+    font-size: 17px;
+    font-family: promtmedium;
+    margin-bottom: 8px;
+}
+.hint-word:hover{
+    color: var(--color-blue-deep);
+}
+
+.result-community{
+    margin-top: 30px;
+}
+.result-community h3{
+    font-size: 20px;
+    color: var(--color-text-dark);
+}
+.community-item{
+    padding: 20px 0px;
+    border-bottom: 1px solid var(--color-border-gray-light);
+    position: relative;
+}
+.community-item .word{
+    margin: 0px;
+    font-size: 20px;
+    color: var(--color-blue);
+    font-family: promtsemibold;
+    padding-right: 130px;
+}
+.community-item .word span{
+    margin-left: 20px;
+    font-size: 15px;
+    color: var(--color-text-light);
+}
+.community-item .sample{
+    margin: 10px 0px 0px;
+    font-size: 15px;
+    font-family: promtsemibold;
+    color: var(--color-text-light);
+    padding-right: 130px;
+}
+.community-item .sample span{
+    font-family: promtitalic;
+}
+.community-item a{
+    display: block;
+    width: 110px;
+    height: 37px;
+    border: 2px solid var(--color-blue);
+    border-radius: 6px;
+    text-align: center;
+    line-height: 35px;
+    color: var(--color-blue);
+    font-size: 15px;
+    font-family: promtmedium;
+    position: absolute;
+    top: 20px;
+    background: var(--color-white);
+    right: 0px;
+}
+.community-item a i{
+    display: inline-block;
+    width: 18.612px;
+    height: 18.612px;
+    background: url(../images/voca-bg.svg) 0px -910px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 9px;
+}
+.community-item a:hover{
+    text-decoration: none;
+}
+.result-contribution{
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--color-border-gray-light);
+}
+.result-contribution h3{
+    font-size: 20px;
+    color: var(--color-text-dark);
+}
+.result-contribution p{
+    margin: 10px 0px 0px;
+    font-family: promtsemibold;
+    color: var(--color-text-light);
+    font-size: 15px;
+}
+.result-contribution a{
+    text-align: center;
+    background: var(--color-green);
+    border: 1px solid var(--color-border-green);
+    border-bottom: 3px solid var(--color-border-green);
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: promtsemibold;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+.result-contribution a:hover{
+    text-decoration: none;
+}
+.community-item a.btn-edit{
+    width: 60px;
+    border: 1px solid var(--color-border-green);
+    color: var(--color-green);
+    border-bottom: 3px solid var(--color-border-green);
+    text-transform: uppercase;
+    font-family: promtsemibold;
+    line-height: 37px;
+    top: 30px;
+}
+.tooltip-inner{
+    width: 200px;
+    min-height: 45px;
+    padding: 10px;
+    background: var(--color-white);
+    border: 2px solid var(--color-border-gray-light);
+    color: var(--color-text-light);
+    font-size: 15px;
+    font-family: promtmedium;
+    border-radius: 10px;
+}
+.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: var(--color-border-gray-light);
+}
+.result-relate-left{
+	    width: 50%;
+    float: left;
+    margin-top: 30px;
+}
+.relate-item{
+	    float: left;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px dashed var(--color-border-gray-light);
+}
+.relate-word{
+	    width: 120px;
+    float: left;
+}
+.relate-word a{
+	    display: block;
+    font-size: 17px;
+    font-family: promtsemibold;
+    color: var(--color-text-dark);
+}
+.relate-word a:hover{
+	color: var(--color-blue);
+	text-decoration: none
+}
+.relate-word-form{
+	    float: left;
+    width: 100px;
+    font-size: 15px;
+    font-family: promtmedium;
+    color: var(--color-text-light);
+    padding-left: 15px;
+}
+.relate-definition{
+	    width: calc(100% - 220px);
+    padding-left: 15px;
+     float: left;
+}
+.relate-definition p{
+	text-align: right;
+   
+    font-size: 17px;
+    font-family: promtmedium;
+    color: var(--color-text-light);
+    margin: 0;
+}
+.result-relate-right{
+	    width: 50%;
+    float: left;
+    padding-left: 95px;
+	padding-top: 30px;
+}
+.relate-right-ads{
+    width: 100%;
+    min-height: 300px;
+    border-radius: 10px;
+    border: 2px solid var(--color-border-gray-light);
+    max-width: 300px;
+    overflow: hidden;
+    float: right;
+}
+.relate-item.relate-item-hidden{
+	display: none;
+}
+.view-more{
+	font-size: 15px;
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--color-blue);
+    font-family: promtmedium;
+    width: 180px;
+}
+.view-more:hover{
+	 color: var(--color-blue-deep);
+	 text-decoration: none;
+}
+.result-tag{
+	max-width: 450px;
+    margin-top: 10px;
+    color: var(--color-text);
+    font-size: 15px;
+    font-family: promtlight;
+}
+@media(max-width: 991px){
+    .result-table{
+        overflow-x: auto ;
+    }
+	.result-relate-left{
+		width: 100%;
+	}
+	.result-relate-right{
+		width: 100%;
+		padding-left: 0px;
+	}
+	.relate-right-ads{
+		margin: auto;
+		
+	}
+}
+
+@media(max-width: 768px){
+   
+
+    .dictionary-welcome .dictionary-welcome-left{
+        float: none;
+        margin: auto;
+        width: 120px;
+        height: 120px;
+    }
+    .dictionary-welcome-right{
+        padding: 20px 0 0px;
+        float: none;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    
+
+    .dictionary-form form{
+        height: unset;
+    }
+    .dictionary-form form input[type="text"]{
+        height: 50px;
+        padding-left: 15px;
+    }
+    .dictionary-form form button{
+        position: relative;
+        top: unset;
+        right: unset;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .result-content .word {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .result-content .pronounce{
+        display: block;
+        float: left;
+    }
+    .result-content .sound{
+        display: block;
+        float: left;
+    }
+    .result-content .sperator{
+        display: block;
+        width: 0;
+        margin-top: 10px;
+        clear: both;
+        height: 15px;
+    }
+    .result-content .pin{
+        display: block;
+        float: right;
+        margin-top: -20px;
+    }
+    .community-item .word{
+        padding-right: 0;
+    }
+    .community-item .sample {
+        padding-right: 0;
+    }
+    .community-item a{
+        position: unset;
+        margin: 15px auto 0px;
+    }
+    .result-contribution a{
+        position: unset;
+        margin: 15px auto 0px;
+        display: block;
+    }
+    .community-item a.btn-edit{
+        width: 125px;
+    }
+}
+
+
+
+
+
+
+#dictionary-modal .modal-dialog{
+    max-width: 750px;
+}
+#dictionary-modal .modal-content{
+    border-radius: 15px;
+}
+#dictionary-modal .modal-header{
+    border: 0px;
+    position: relative;
+}
+#dictionary-modal .modal-header a{
+    display: inline-block;
+    width: 15.879px;
+    height: 15.878px;
+    background: url(../images/voca-bg.svg) 0px -490px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+#dictionary-modal .modal-body{
+    padding: 10px 50px 30px 25px;
+}
+#dictionary-modal .content{
+    float: left;
+    width: 100%;
+}
+#dictionary-modal .content.content-input{
+    margin-top: 40px;
+}
+#dictionary-modal .content-left{
+    width: 157px;
+    float: left;
+    min-height: 1px;
+}
+#dictionary-modal .content-left p{
+    margin: 0;
+    font-size: 15px;
+    font-family: promtsemibold;
+    text-align: right;
+}
+#dictionary-modal .content-right{
+    float: left;
+    width: calc(100% - 157px);
+    padding-left: 30px;
+}
+#dictionary-modal .content-right h3{
+    font-size: 20px;
+    font-family: promtextrabold;
+    text-transform: uppercase;
+    margin: 0px 0px;
+}
+#dictionary-modal .content-right input{
+    display: inline-block;
+    width: 100%;
+    height: 46px;
+    border: 2px solid var(--color-border-gray-light);
+    background: var(--color-gray-light);
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 15px;
+    margin-top: -12px;
+    font-family: promtmedium;
+    color: var(--color-text-light);
+}
+#dictionary-modal .content-right input:focus{
+    outline: none;
+    border-color: var(--color-blue);
+    box-shadow: none;
+}
+#dictionary-modal .content-right select{
+    display: inline-block;
+    width: 117px;
+    height: 48px;
+    border: 0;
+    background: var(--color-white);
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 15px;
+    margin-top: -12px;
+    -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;     
+   background: url(../images/voca-bg.svg) 0px -960px;
+   color: var(--color-text-light);
+   font-family: promtmedium;
+}
+#dictionary-modal .content-right select:focus{
+    outline: none;
+    border-color: var(--color-blue);
+    box-shadow: none;
+    
+}
+#dictionary-modal .btn-save{
+    margin-top: 30px;
+    text-transform: uppercase;
+    border: 1px solid var(--color-border-gray-light);
+    border-bottom: 3px solid var(--color-border-gray-light);
+    color: var(--color-text-light);
+    background: var(--color-gray-light);
+}
+#dictionary-modal .btn-save.btn-active{
+    
+    background: var(--color-green);
+    color: var(--color-white);
+    border: 1px solid var(--color-border-green);
+    border-bottom: 3px solid var(--color-border-green);
+}
+@media(max-width: 767px){
+    #dictionary-modal .content{
+        float: none;
+    }
+    #dictionary-modal .content-left{
+        width: 100%;
+        min-height: unset;
+        float: none;
+    }
+    #dictionary-modal .content-right{
+        float: none;
+        padding: 0;
+        width: 100%;
+    }
+    #dictionary-modal .content-right h3{
+        text-align: center;
+    }
+    #dictionary-modal .content.content-input{
+        margin-top: 15px;
+    }
+    
+    #dictionary-modal .content-left p{
+        text-align: left;
+    }
+    #dictionary-modal .content-right input{
+        margin-top: 8px;
+    }
+    #dictionary-modal .content-right select{
+        margin-top: 8px;
+    }
+    #dictionary-modal .btn-save{
+        margin: 30px auto 0px;
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+#description-modal .modal-dialog{
+    max-width: 750px;
+}
+#description-modal .modal-content{
+    border-radius: 15px;
+}
+#description-modal .modal-header{
+    border: 0px;
+    position: relative;
+}
+#description-modal .modal-header a{
+    display: inline-block;
+    width: 15.879px;
+    height: 15.878px;
+    background: url(../images/voca-bg.svg) 0px -490px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+	z-index: 1;
+}
+#description-modal .modal-body{
+    padding: 10px 50px 25px;
+}
+#description-modal .modal-body iframe{
+    max-width: 100%;
+}
+#description-modal .modal-body table{
+    width: 100%;
+}
+#description-modal .modal-body table td{
+    height: 30px;
+    padding-left: 10px;
+}
