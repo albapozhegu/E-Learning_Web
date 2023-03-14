@@ -1,5 +1,5 @@
 # E-learning App with MERN Stack
-This is an E-learning app built with the MEVN stack, which stands for MongoDB, Express.js, Vue.js, and Node.js. The app allows users to browse, enroll and participate in courses, take quizzes and track their progress.
+This is an E-learning app built with the MEVN stack, which stands for MongoDB, Express.js, React.js, and Node.js. The app allows users to browse, enroll and participate in courses, take quizzes and track their progress.
 
 # Table of Contents
 Getting Started
@@ -19,7 +19,7 @@ Node.js
 MongoDB
 # Installation
 1. Clone the repository  
-git clone https://github.com/albapozhegu/e-learning.git
+git clone https://github.com/albapozhegu/e-learning_web.git
 2. Edit the .env file and set the following variables:  
 MONGO_URI=<your_mongodb_uri>
 2. Start the server  
