@@ -11,7 +11,7 @@ exports.addPodcast = async(req, res) => {
         }
         const newPodcast = await PodcastModel.create(podcastInfo)
         if (newPodcast) {
-            return res.status(200).json({ message: 'success' })
+            return res.status(200).json({ message: 'Success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Could not create blog' })
@@ -34,7 +34,7 @@ exports.updatePodcast = async(req, res) => {
     try {
         const update = await PodcastModel.findByIdAndUpdate(id, { title, file, duration, authour })
         if (update) {
-            return res.status(200).json({ message: 'success' })
+            return res.status(200).json({ message: 'Success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Operation failed' })
@@ -52,6 +52,6 @@ exports.deletePodcast =async (req, res) => {
         console.error("DELETE ERROR: ", error);
         return res
             .status(503)
-            .json({ message: "Eror, can not delete this question" });
+            .json({ message: "Error, can not delete this question" });
     }
 }
