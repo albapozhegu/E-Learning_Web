@@ -9,7 +9,7 @@ exports.addStories = async(req, res) => {
         }
         const newStories = await StoriesModel.create(forumInfo)
         if (newStories) {
-            return res.status(200).json({ message: 'success' })
+            return res.status(200).json({ message: 'Success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Could not create blog' })
@@ -32,7 +32,7 @@ exports.updateStories = async(req, res) => {
     try {
         const update = await StoriesModel.findByIdAndUpdate(id, { createdBy, content })
         if (update) {
-            return res.status(200).json({ message: 'success' })
+            return res.status(200).json({ message: 'Success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Operation failed' })
@@ -50,6 +50,6 @@ exports.deleteStories = async(req, res) => {
         console.error("DELETE ERROR: ", error);
         return res
             .status(503)
-            .json({ message: "Eror, can not delete this question" });
+            .json({ message: "Error, can not delete this question" });
     }
 }
