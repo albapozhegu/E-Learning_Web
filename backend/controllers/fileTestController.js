@@ -84,7 +84,7 @@ try {
   return res.status(200).json({ Files });
 } catch (error) {
   console.error("ERROR: ", error);
-  return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+  return res.status(503).json({ message: "Service error, try again later" });
 }
 };
 
@@ -117,7 +117,7 @@ try {
   return res.status(200).json(fileReturn);
 } catch (error) {
   console.error("ERROR: ", error);
-  return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+  return res.status(503).json({ message: "Service error, try again later" });
 }
 };
 
@@ -130,7 +130,7 @@ try {
   return res.status(200).json({ file });
 } catch (error) {
   console.error("ERROR: ", error);
-  return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+  return res.status(503).json({ message: "Service error, try again later" });
 }
 };
 
@@ -150,7 +150,7 @@ try {
   return res.status(200).json({ files });
 } catch (error) {
   console.error("ERROR: ", error);
-  return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+  return res.status(503).json({ message: "Service error, try again later" });
 }
 };
 
@@ -165,7 +165,7 @@ try {
   return res.status(200).json({ files });
 } catch (error) {
   console.error("ERROR: ", error);
-  return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+  return res.status(503).json({ message: "Service error, try again later" });
 }
 };
 
