@@ -30,7 +30,7 @@ exports.updateFAQ=async(req,res)=>{
     try {
         const update = await FAQModel.findByIdAndUpdate(id, {question,answer})
         if (update) {
-            return res.status(200).json({ message: 'success' })
+            return res.status(200).json({ message: 'Success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Operation failed' })
@@ -48,6 +48,6 @@ exports.deleteFAQ=async(req,res)=>{
         console.error("DELETE ERROR: ", error);
         return res
             .status(503)
-            .json({ message: "Eror, could not delete" });
+            .json({ message: "Error, could not delete" });
     }
 }
