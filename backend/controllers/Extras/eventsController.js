@@ -41,7 +41,7 @@ exports.updateEvent = async(req, res) => {
     try {
         const update = await EventsModel.findByIdAndUpdate(_id, { date, duration, title, host, status })
         if (update) {
-            return res.status(200).json({ message: 'success' })
+            return res.status(200).json({ message: 'Success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Operation failed' })
@@ -59,6 +59,6 @@ exports.deleteEvent = async(req, res) => {
         console.error("DELETE ERROR: ", error);
         return res
             .status(503)
-            .json({ message: "Eror, can not delete this question" });
+            .json({ message: "Error, can not delete this question" });
     }
 }
