@@ -38,7 +38,7 @@ exports.updateComment =async (req, res) => {
     try {
         const update = await CommentModel.findByIdAndUpdate(id, { content, status  })
         if (update) {
-            return res.status(200).json({ message: 'success' })
+            return res.status(200).json({ message: 'Success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Operation failed' })
@@ -56,6 +56,6 @@ exports.deleteComment = async(req, res) => {
         console.error("DELETE ERROR: ", error);
         return res
             .status(503)
-            .json({ message: "Eror, can not delete this question" });
+            .json({ message: "Error, can not delete this question" });
     }
 }
