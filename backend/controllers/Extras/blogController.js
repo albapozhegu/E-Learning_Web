@@ -43,7 +43,7 @@ exports.updateBlog = async(req, res) => {
     try {
         const update = await BlogModel.findByIdAndUpdate(id, { title, content,subTitle, status })
         if (update) {
-            return res.status(200).json({ message: 'success' })
+            return res.status(200).json({ message: 'Success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Operation failed' })
