@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const FileTestModel = new Schema({
+  
   Content: {
     type: String,
     default: null
@@ -36,7 +37,6 @@ const FileTestModel = new Schema({
   File: {
     type: Number
   },
-
 });
 
 module.exports = mongoose.model('fileTest', FileTestModel);
