@@ -10,7 +10,7 @@ exports.createIPA = async (ipaInfo) => {
     return null;
   } catch (error) {
     throw error;
-  }
+  }  
 };
 
 exports.getIPAById = async (id = "") => {
