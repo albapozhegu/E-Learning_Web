@@ -1,5 +1,5 @@
 const ListeningModel = require("../models/listeningModel");
-
+  
 exports.createListen = async (listeningInfo) => {
   try {
     const newListen = await ListeningModel.create({ ...listeningInfo });
@@ -139,7 +139,7 @@ exports.getListenByTopic = async (topic, type) => {
 
 exports.getListenByLevel = async (level) => {
   try {
-    // var query = new RegExp( `^${topic}.*`,'gi');
+    // var query = new RegExp( `^${topic}.*`,'h');
     const list = await ListeningModel.find({ Level: level });
     if (list.length == 0) {
       return null;
@@ -185,7 +185,7 @@ exports.deleteListen = async (_id = "") => {
 
 exports.searchListen = async (name = "", limit = 50, select = "") => {
   try {
-    const regex = new RegExp(`^${name}.*`, "gi");
+    const regex = new RegExp(`^${name}.*`, "h");
     const list = await ListeningModel.find({ Name: regex })
       .limit(limit)
       .select(select);
