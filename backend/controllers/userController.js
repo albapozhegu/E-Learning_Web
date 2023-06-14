@@ -34,12 +34,20 @@ exports.register = async (req, res) => {
       email,
       password: passwordHash,
     };
-    const activation_token = createActivationToken(newUser);
-    const url = `${CLIENT_URL}/user/activate/${activation_token}`;
-    mailConfig.sendEmail(email, mailConfig.activationEmail(url));
+    // const activation_token = createActivationToken(newUser);
+    // const url = `${CLIENT_URL}/user/activate/${activation_token}`;
+    // mailConfig.sendEmail(email, mailConfig.activationEmail(url));
+    const createNewUser = new Users({
+      name,
+      email,
+      password:passwordHash,
+    });
+
+   await createNewUser.save();
     return res.status(200).json({
       message: "Register successfully! Please activate your email to start",
     });
+
   } catch (err) {
     return res.status(500).json({ message: err.message });
   }
@@ -274,9 +282,9 @@ exports.lockUser = async (req, res) => {
     return res.status(200).json({ message: "Account has been locked" });
   } catch (err) {
     return res.status(500).json({ message: err.message });
-  }
-};
-
+  } 
+}; 
+ 
 exports.unlockUser = async (req, res) => {
   try {
     await Users.findOneAndUpdate(
@@ -390,7 +398,7 @@ exports.putUpdateUserCoin = async (req, res) => {
     return res.status(406).json({ message: "Not Accept" });
   } catch (error) {
     console.error("PUT UPDATE USER COIN ERROR: ", error);
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
 
