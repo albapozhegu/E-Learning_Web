@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const AnnouncementModel = new Schema({
+    
     title: {
         type: String,
         required: true,
@@ -13,9 +14,9 @@ const AnnouncementModel = new Schema({
         type: Boolean,
         required: true,
         default: null
-    }
+    } 
 },
-{
+{ 
     timestamps:true
 })
 module.exports = mongoose.model('announcement', AnnouncementModel)
