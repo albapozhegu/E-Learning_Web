@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
-
 const ListeningModel = new Schema({
+  
   CreateDate: {
     type: Date,
     required: true,
