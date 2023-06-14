@@ -10,7 +10,7 @@ const COLORS = ['#847AD1', '#7AD18A', '#E06B96', '#36C0CE', '#DB883E'];
 function LeaderBoardPage() {
   useTitle('Bảng xếp hạng');
 
-  return (
+  return ( 
     <div className="container">
       <div className="leaderboard">
         <h1 className="leaderboard-title flex-center">
