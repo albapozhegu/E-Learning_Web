@@ -173,7 +173,7 @@ exports.getIPARelative = async (req, res) => {
 //     return res.status(200).json({ ipas });
 //   } catch (error) {
 //     console.error("ERROR: ", error);
-//     return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+//     return res.status(503).json({ message: "Service error, try again later" });
 //   }
 // };
 
@@ -185,6 +185,6 @@ exports.getIPAsByType = async (req, res) => {
     return res.status(200).json({ ipas });
   } catch (error) {
     console.error("ERROR: ", error);
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
