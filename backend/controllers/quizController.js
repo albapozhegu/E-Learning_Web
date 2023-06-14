@@ -50,7 +50,7 @@ exports.getByListeningId = async (req, res) => {
     const quiz = await getQuizByListenId(listenId);
     return res.status(200).json(quiz);
   } catch (error) {
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
 
@@ -93,7 +93,7 @@ exports.getAllQuizzes = async (req, res) => {
     return res.status(200).json({ quizzes });
   } catch (error) {
     console.error("ERROR: ", error);
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
 
@@ -106,6 +106,6 @@ exports.getAllListenAndGrammar = async (req, res) => {
     return res.status(200).json({listens, grammars });
   } catch (error) {
     console.error('ERROR: ', error);
-    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+    return res.status(503).json({ message: 'Service error, try again later' });
   }
 };
