@@ -3,6 +3,7 @@ const { NUM_OF_SPECIALTY, NUM_OF_TOPICS } = require('../constants');
 const Schema = mongoose.Schema;
 
 const WordModel = new Schema({
+  
   word: {
     type: String,
     required: true,
@@ -74,11 +75,6 @@ const WordModel = new Schema({
     trim: true,
     maxLength: 150,
   },
-
-  // audioSrc: {
-  //   type: String,
-  //   default: null,
-  // },
 
   isChecked: {
     type: Boolean,
