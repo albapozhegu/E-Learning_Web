@@ -55,7 +55,7 @@ function ForgotPasswordPage() {
       dispatch(setMessage(res.data.message, "success"));
       setLoading(false);
     } catch (error) {
-      dispatch(setMessage(error.response?.data?.message, "error"));
+      dispatch(setMessage(error.response?.data?.message, "error"));  
       setLoading(false);
     }
   };
