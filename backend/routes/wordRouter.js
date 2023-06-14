@@ -2,7 +2,7 @@ const wordApi = require('express').Router();
 const { Router } = require('express');
 const wordController = require('../controllers/wordController');
 const { authentication } = require('../middlewares/authenticationMiddleware');
-
+  
 wordApi.get('/get-all-word', authentication, wordController.getAllWords);
 wordApi.post('/post-word',authentication, wordController.postContributeWord);
 wordApi.put('/put-word/:id',authentication, wordController.putContributeWord);
@@ -16,6 +16,5 @@ wordApi.get('/get-word-topics/:topic',authentication, wordController.getTopics);
 wordApi.get('/get-word-topic-slide',authentication, wordController.getWordTopicSlide);
 wordApi.get('/get-word-topic-gallery',authentication, wordController.getWordTopicGallery);
 wordApi.get('/get-word-by-word',authentication, wordController.getWordByWord);
-
 
 module.exports = wordApi;
