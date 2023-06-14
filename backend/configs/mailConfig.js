@@ -53,7 +53,7 @@ const sendEmail = (to, content) => {
     html: content,
   };
 
-  smtpTransport.sendMail(mailOptions, (err, info) => {
+ smtpTransport.sendMail(mailOptions, (err, info) => {
     if (err) return err;
     return info;
   });
