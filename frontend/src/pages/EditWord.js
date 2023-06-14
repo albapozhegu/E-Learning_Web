@@ -9,7 +9,7 @@ const useStyle = makeStyles(() => ({
 }));
 function EditWordPage() {
   const classes = useStyle();
-  return (
+  return ( 
     <div className="container">
       <div className={classes.root}>
         <div className="ani-fade">
