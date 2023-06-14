@@ -33,7 +33,7 @@ exports.updateBooks =async (req, res) => {
     try {
         const update = await BookModel.findByIdAndUpdate(id, { title, authour,thumbnail })
         if (update) {
-            return res.status(200).json({ message: 'Success' })
+            return res.status(200).json({ message: 'success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Operation failed' })
@@ -51,6 +51,6 @@ exports.deleteBooks =async (req, res) => {
         console.error("DELETE ERROR: ", error);
         return res
             .status(503)
-            .json({ message: "Error, can not delete this question" });
+            .json({ message: "Eror, can not delete this question" });
     }
 }
