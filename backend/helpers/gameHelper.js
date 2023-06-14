@@ -67,7 +67,6 @@ const randomWordQuestionPack = (list = [], amount = 100) => {
         : generateWrongWordList(word, synonyms, list, false),
     });
   }
-
   return result;
 };
 
