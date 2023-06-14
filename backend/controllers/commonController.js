@@ -8,7 +8,7 @@ exports.getTotalWordPack = async (req, res, next) => {
   } catch (error) {
     return res.status(503).json({ message: 'Service error, try again later' });
   }
-};
+};  
 
 exports.getTotalWordPackTopic = async (req, res, next) => {
   try {
