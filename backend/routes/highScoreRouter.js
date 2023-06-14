@@ -7,4 +7,4 @@ highScoreApi.put('/update', authentication, highScoreController.putUpdateHighSco
 highScoreApi.get('/leaderboard',authentication, highScoreController.getLeaderboard);
 highScoreApi.post('/post', authentication, highScoreController.postScore);
 
-module.exports = highScoreApi;
+module.exports = highScoreApi; 
