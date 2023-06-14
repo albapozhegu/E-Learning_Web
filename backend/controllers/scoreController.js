@@ -3,7 +3,7 @@ const {
   createScoreRead,
 } = require("../services/scoreService");
 
-//create listen score
+//create listen score 
 exports.postScoreListen = async (req, res) => {
   try {
     for (let score of req.body) {
@@ -18,7 +18,7 @@ exports.postScoreListen = async (req, res) => {
   }
 };
 
-//create listen score
+//create listen score 
 exports.postScoreRead = async (req, res) => {
   try {
     for (let score of req.body) {
