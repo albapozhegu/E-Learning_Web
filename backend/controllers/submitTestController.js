@@ -83,7 +83,6 @@ try {
 //   }
 // };
 
-
 //update submitTest
 exports.putSubmitTest = async (req, res) => {
   try {
@@ -156,10 +155,10 @@ try {
   }
   else
   {
-    return res.status(503).json({ message: 'Eror, can not delete' });
+    return res.status(503).json({ message: 'Error, can not delete' });
   }
 } catch (error) {
   console.error('ERROR: ', error);
-  return res.status(503).json({ message: 'Eror, can not delete this grammar' });
+  return res.status(503).json({ message: 'Error, can not delete this grammar' });
 }
 };
