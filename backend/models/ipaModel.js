@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
 const IPAModel = new Schema({
+    
     Audio: {
     type: String,
     default: null,
@@ -51,6 +51,5 @@ const IPAModel = new Schema({
   },
 
 });
-
 
 module.exports = mongoose.model('IPA', IPAModel);
