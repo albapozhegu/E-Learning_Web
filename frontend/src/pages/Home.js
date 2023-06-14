@@ -7,7 +7,7 @@ import Banner from "components/Banner";
 import Contact from "components/Contacts";
 import {
   FaMicrosoft,
-  FaCoffee,
+  FaCoffee, 
   FaLanguage,
   FaLaptopHouse,
   FaLayerGroup,
