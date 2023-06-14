@@ -27,7 +27,6 @@ const AnswerTestModel = new Schema({
     default : false,
   },
 
- // SubmitTests: [{type: Schema.Types.Map}]
 });
 
 module.exports = mongoose.model('answerTest', AnswerTestModel);
