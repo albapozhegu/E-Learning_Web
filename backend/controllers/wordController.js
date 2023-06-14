@@ -28,7 +28,7 @@ exports.postContributeWord = async (req, res, next) => {
       const isExist = await isExistWord(word, type);
       if(isExist)
       {
-        return res.status(400).json({ message: `Từ ${word} (${type}) đã tồn tại trong từ điển !` });
+        return res.status(400).json({ message: `The ${word} (${type}) already exists in the dictionary !` });
       }
      // upload description picture if available
      let pictureUrl = null;
@@ -120,7 +120,7 @@ exports.getWordPack = async (req, res) => {
     return res.status(200).json({ packList });
   } catch (error) {
     // console.error("WORD GET WORD PACK ERROR: ", error);
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
 
@@ -136,7 +136,7 @@ exports.getSearchWord = async (req, res) => {
     return res.status(200).json({ packList: list });
   } catch (error) {
     console.error("GET SEARCH WORD ERROR: ", error);
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
 
@@ -149,7 +149,7 @@ exports.getWordDetails = async (req, res, next) => {
       return res.status(200).json(wordDetail);
     }
   } catch (error) {
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
 
@@ -162,7 +162,7 @@ exports.getWordByWord = async (req, res, next) => {
       return res.status(200).json(wordDetail);
     }
   } catch (error) {
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
 
@@ -196,7 +196,7 @@ exports.getUserFavoriteList = async (req, res, next) => {
     return res.status(200).json({ packList });
   } catch (error) {
     console.error(' ERROR: ', error);
-    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+    return res.status(500).json({ message: 'Service error, try again later' });
   }
 };
 
@@ -207,7 +207,7 @@ exports.getUserFavoriteList = async (req, res, next) => {
     return res.status(200).json({words });
   } catch (error) {
     console.error('ERROR: ', error);
-    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+    return res.status(503).json({ message: 'Service error, try again later' });
   }
 };
 
@@ -248,7 +248,7 @@ exports.getTopics = async (req, res) => {
     return res.status(200).json({topics });
   } catch (error) {
     console.error('ERROR: ', error);
-    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+    return res.status(503).json({ message: 'Service error, try again later' });
   }
 };
 
@@ -263,7 +263,7 @@ exports.getWordTopicSlide = async (req, res) => {
     return res.status(200).json(packList);
   } catch (error) {
     console.error('ERROR: ', error);
-    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+    return res.status(503).json({ message: 'Service error, try again later' });
   }
 };
 
@@ -285,9 +285,6 @@ exports.getWordTopicGallery = async (req, res) => {
     return res.status(200).json(packList);
   } catch (error) {
     console.error('ERROR: ', error);
-    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+    return res.status(503).json({ message: 'Service error, try again later' });
   }
-};
-
-
-
+}; 
