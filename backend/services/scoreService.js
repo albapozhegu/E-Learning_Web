@@ -25,4 +25,4 @@ exports.createScoreRead = async (body) => {
     } catch (error) {
       throw error;
     }
-  };
+  };  
