@@ -12,13 +12,13 @@ const {
       console.log(req.user.id)
       const accountId = req.user?.id;
       if (!accountId) {
-        return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+        return res.status(500).json({ message: 'Service error, try again later' });
       }
   
       await updateTop({accountId, name, score});
     } catch (error) {
       console.error('PUT UPDATE HIGHT SCORE ERROR: ', error);
-      return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+      return res.status(500).json({ message: 'Service error, try again later' });
     }
   };
 
@@ -29,7 +29,7 @@ const {
       const accountId = req.user?.id;
     //  console.log(accountId)
       if (!accountId) {
-        return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+        return res.status(500).json({ message: 'Service error, try again later' });
       }
   
       const checkExisted = await getScore(name, accountId);
@@ -45,7 +45,7 @@ const {
       return res.status(200).json({ message: 'success' });
     } catch (error) {
       console.error('ERROR: ', error);
-      return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+      return res.status(500).json({ message: 'Service error, try again later' });
     }
   };
   
@@ -62,7 +62,6 @@ const {
       return res.status(200).json({ list });
     } catch (error) {
       console.error('GET LEADERBOARD ERROR: ', error);
-      return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+      return res.status(500).json({ message: 'Service error, try again later' });
     }
   };
-  
