@@ -7,7 +7,7 @@ import Environment from 'assets/images/listenTopics/Environment.jpg';
 import Family from 'assets/images/listenTopics/Family.jpg';
 import Food from 'assets/images/listenTopics/Food.jpg';
 import Health from 'assets/images/listenTopics/Health.jpg';
-import Holidays from 'assets/images/listenTopics/Holidays.jpg';
+import Holidays from 'assets/images/listenTopics/Holidays.jpg'; 
 import Leisure from 'assets/images/listenTopics/Leisure.jpg';
 import Movies from 'assets/images/listenTopics/Movies.jpg';
 import Music from 'assets/images/listenTopics/Music.jpg';
