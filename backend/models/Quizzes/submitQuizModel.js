@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const SubmitQuizModel = new Schema({
+  
   Core: {
-    type: Number, 
+    type: Number,
     default: 0,
   },
 
