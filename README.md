@@ -20,7 +20,7 @@ MongoDB
 # Installation
 1. Clone the repository  
 git clone https://github.com/albapozhegu/Learning_Website.git
-2. Edit the .env file and set the following variables:  
+2. Create a .env file inside backend folder and set the following variables:  
 MONGO_URI=<your_mongodb_uri>
 2. Start the server  
 cd backend  
