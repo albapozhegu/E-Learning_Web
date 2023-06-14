@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import grammarApi from '../apis/grammarApi';
 import { useHistory, useParams } from 'react-router';
 import { cloudinaryImgOptimize } from "helper";
-import { DEFAULTS } from 'constants/index';
+import { DEFAULTS } from 'constants/index'; 
 import { makeStyles } from "@material-ui/core";
 import { Link } from 'react-router-dom';
 
