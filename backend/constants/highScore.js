@@ -18,4 +18,3 @@ exports.HIGHSCORE_NAME = {
   };
   
   exports.MAX_TOP = 20;
-  
