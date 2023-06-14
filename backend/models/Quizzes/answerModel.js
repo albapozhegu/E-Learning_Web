@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const AnswerModel = new Schema({
+  
   Content: {
     type: String,
     required: true,
