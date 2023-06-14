@@ -15,7 +15,6 @@ exports.uploadImage = async (imgSrc, folderName = '', config = {}) => {
   }
 };
 
-
 exports.uploadVideo = async (vidSrc, folderName ='', config = {}) => {
   try {
     const result = await cloudinary.uploader.upload(vidSrc, {
@@ -123,7 +122,6 @@ exports.getWordTopicGallery = async (
     throw error;
   }
 };
-
 
 exports.countWordPack = async (packInfo = {}) => {
   try {
