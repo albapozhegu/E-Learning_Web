@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const FileTest = require('./fileTestModel');
-
 const TestModel = new Schema({
+  
   Type: {
     type: String,
     required: true,
@@ -27,9 +27,5 @@ const TestModel = new Schema({
     type: Number,
     default: 120,
   },
-  
- // FileTests: [{type: Schema.Types.Map}]
-
 });
-
 module.exports = mongoose.model('Test', TestModel);
