@@ -14,7 +14,7 @@ exports.updateTop = async (accountId, name, score) => {
       }
     }
 
-    let newTops = [];
+    let newTops = [];  
     if (!Boolean(tops)) {
       newTops.push({ accountId, score: Number(score) });
       HighscoreModel.create({
