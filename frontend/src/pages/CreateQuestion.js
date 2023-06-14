@@ -63,7 +63,7 @@ const useStyle = makeStyles(() => ({
 
   btnReset: {
     borderColor: "var(--accent-color) !important",
-    color: "var(--accent-color) !important",
+    color: "var(--accent-color) !important", 
 
     "&:hover, &:active": {
       filter: "brightness(0.85)", 
