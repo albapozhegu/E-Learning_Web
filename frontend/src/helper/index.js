@@ -16,7 +16,7 @@ export const debounce = (timer = null, cbFn, delay = 350) => {
 
 // compare 2 arrays
 export const equalArray = (a, b) => {
-  return (
+  return ( 
     Array.isArray(a) &&
     Array.isArray(b) &&
     a.length === b.length &&
