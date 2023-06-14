@@ -203,7 +203,7 @@ exports.deleteById = async (req, res) => {
     const  id  = req.params.id;
     const isDelete = await deleteGrammarById(id);
     if (isDelete) {
-      return res.status(200).json({ message: 'Deleted successfully.' });
+      return res.status(200).json({ message: 'Delete successfully.' });
     }
     return res.status(400).json({ message: 'Error, can not delete this grammar' });
   } catch (error) {
