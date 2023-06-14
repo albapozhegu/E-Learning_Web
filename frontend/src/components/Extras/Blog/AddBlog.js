@@ -12,7 +12,7 @@ import LoopIcon from "@material-ui/icons/Loop";
 
 //-------------------------------------------------------------------------------------------------------------------
 const useStyle = makeStyles(() => ({
-  wrap: {
+  wrap: { 
     minHeight: "calc(100vh - 7.2rem)",
     width:500
   },
