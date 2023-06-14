@@ -34,7 +34,7 @@ exports.register = async (req, res) => {
       email,
       password: passwordHash,
     };
-    // const activation_token = createActivationToken(newUser);
+    // const activation_token = createActivationToken(newUser); 
     // const url = `${CLIENT_URL}/user/activate/${activation_token}`;
     // mailConfig.sendEmail(email, mailConfig.activationEmail(url));
     const createNewUser = new Users({
