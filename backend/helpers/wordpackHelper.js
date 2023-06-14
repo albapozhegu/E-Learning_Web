@@ -1,5 +1,6 @@
 exports.addTopicsQuery = (topics, query) => {
-  // query multiple topic
+  
+// query multiple topic
   if (topics.length > 0) {
     let orList = [];
     topics.forEach((topic) =>
@@ -23,7 +24,7 @@ exports.convertPackInfoToQueryStr = (packInfo) => {
     }
   }
 
-  // query multiple topic
+// query multiple topic
   this.addTopicsQuery(topicList, query);
 
   return query;
