@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const controller = require('../../controllers/Extras/eventsController');
 const { authentication, authRole } = require('../../middlewares/authenticationMiddleware');
-
+  
 router.get('/get-all-event',authentication, controller.getAllEvents);
 router.get('/get-event-by-id',authentication,controller.getEventById);
 router.put('/put-event/:id',authentication, controller.updateEvent)
