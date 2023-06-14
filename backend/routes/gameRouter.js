@@ -5,7 +5,7 @@ const { authentication } = require("../middlewares/authenticationMiddleware");
 // ======== CORRECT WORD GAME ========
 gameApi.get('/correct-word/pack',authentication, gameController.getWordPackCWG);
 
-// ======== WORD MATCH GAME ========
+// ======== WORD MATCH GAME ======== 
 gameApi.get('/word-match/pack',authentication, gameController.getWordPackWMG);
 
 // ======== FAST GAME ========
