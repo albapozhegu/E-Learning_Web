@@ -15,7 +15,7 @@ function AddWordPage() {
     <div className="container">
       <div className={classes.root}>
         <div className="ani-fade">
-          <WordContributionData />
+          <WordContributionData /> 
         </div>
       </div>
     </div>
