@@ -1,15 +1,22 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const StoriesModel = new Schema({
-    createdBy:{
-        type:Schema.Types.ObjectId,
-        required:true
+    
+    title: {
+        type: String,
+        required: true,
     },
-    content:{
-        type:String,
-        required:true
+    content: {
+        type: String,
+        required: true,
+    },
+    status: {
+        type: Boolean,
+        required: true,
+        default: null
     }
-},{
-    timestamp:true
+},
+{
+    timestamps:true
 })
 module.exports = mongoose.model('stories', StoriesModel)
