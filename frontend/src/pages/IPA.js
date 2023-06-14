@@ -5,7 +5,7 @@ import useTitle from "hooks/useTitle";
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { dictionaryRoot } from "../components/UI/style";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/styles"; 
 
 const useStyle = makeStyles((theme) => ({
   ...dictionaryRoot(theme),
