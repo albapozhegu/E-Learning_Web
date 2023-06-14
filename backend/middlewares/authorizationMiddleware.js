@@ -1,4 +1,5 @@
 const Users = require("../models/userModel");
+
 exports.checkAdmin = async (req, res, next) => {
   try {
     const user = await Users.findOne({ _id: req.user.id });
@@ -13,6 +14,7 @@ exports.checkAdmin = async (req, res, next) => {
     return res.status(500).json({ message: err.message });
   }
 };
+
 exports.checkInstructor = async (req, res, next) => {
   try {
     const user = await Users.findOne({ _id: req.user.id });
