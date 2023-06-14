@@ -4,7 +4,7 @@ import Level3 from 'assets/images/grammarLevels/Level3.jpg';
 import Level4 from 'assets/images/grammarLevels/Level4.jpg';
 
 export const GRAMMAR_LEVEL = [
-    {
+    { 
       value: '1',
       label: 'Level 1',
       image: Level1,
