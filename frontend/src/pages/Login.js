@@ -59,7 +59,7 @@ function LoginPage() {
     try {
       setLoading(true);
       const res = await userApi.login(user.email, user.password);
-      dispatch(setMessage(res.data.message, "success"));
+      dispatch(setMessage(res.data.message, "success")); 
       setTimeout(() => {
         window.location.replace("/home");
       }, UX.DELAY_TIME);
