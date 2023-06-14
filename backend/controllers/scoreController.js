@@ -4,7 +4,7 @@ const {
 } = require("../services/scoreService");
 
 //create listen score 
-exports.postScoreListen = async (req, res) => {
+exports.postScoreListen = async (req, res) => { 
   try {
     for (let score of req.body) {
       let { Sentences, Score} = score;
