@@ -4,7 +4,7 @@ import useTitle from 'hooks/useTitle';
 import React from 'react';
 
 
-function FastGamePage() {
+function FastGamePage() { 
   useTitle('Game hands faster than brain');
   useCloseNavigation();
 
