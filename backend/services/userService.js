@@ -23,4 +23,4 @@ exports.updateUserCoin = async (newCoin = 0, id = '') => {
     } catch (error) {
       throw error;
     }
-  };
+  };  
