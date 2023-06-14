@@ -29,7 +29,7 @@ exports.updateWord = async (_id = "", wordInfo) => {
 
 exports.getIdByWord = async (word = "") => {
   try {
-    var query = new RegExp(`^${word}.*`, "gi");
+    var query = new RegExp(`^${word}.*`, "h");
     const id = await WordModel.findOne({ Word: query }).select("-_id");
     return id;
   } catch (error) {
@@ -39,7 +39,7 @@ exports.getIdByWord = async (word = "") => {
 
 exports.searchWord = async (word = "", limit = 50, select = "") => {
   try {
-    const regex = new RegExp(`^${word}.*`, "gi");
+    const regex = new RegExp(`^${word}.*`, "h");
     const list = await WordModel.find({ word: regex })
       .limit(limit)
       .select(select);
@@ -101,7 +101,7 @@ exports.getFavoriteList = async (rawFavorites = []) => {
 
     let list = [];
     for (let word of rawFavorites) {
-      const regex = new RegExp(`^${word}.*`, "gi");
+      const regex = new RegExp(`^${word}.*`, "h");
       const wordDetails = await WordModel.findOne({ Word: regex }).select(
         "-_id type word mean phonetic picture"
       );
@@ -118,7 +118,7 @@ exports.getFavoriteList = async (rawFavorites = []) => {
 
 exports.getWordByTopic = async (topic) => {
   try {
-    // var query = new RegExp( `^${topic}.*`,'gi');
+    // var query = new RegExp( `^${topic}.*`,'h');
     const list = await WordModel.find({ Topics: topic });
     if (list.length == 0) {
       return null;
@@ -159,4 +159,4 @@ exports.getWordTopicByPage = async (
   } catch (error) {
     throw error;
   }
-};
+};  
