@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
   root: {
     minHeight: "100vh",
     color: "white",
-    position: "relative",
+    position: "relative", 
   },
   container: {
     display: "flex",
