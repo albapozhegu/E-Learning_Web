@@ -9,7 +9,7 @@ import WordSortModal from "components/UI/WordSortModal";
 import WordItem from "components/WordAdmin/WordItem";
 import WordSkeleton from "components/WordAdmin/WordSkeleton";
 import wordApi from "apis/wordApi";
-import WordDetailModal from "components/UI/WordDetailModal";
+import WordDetailModal from "components/UI/WordDetailModal"; 
 import { useParams } from "react-router";
 
 const useStyle = makeStyles((theme) => ({
