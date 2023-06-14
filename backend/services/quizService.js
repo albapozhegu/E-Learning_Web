@@ -65,4 +65,4 @@ exports.getAllQuizzes = async () => {
   } catch (error) {
     throw error;
   }
-};
+};  
