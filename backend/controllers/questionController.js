@@ -73,7 +73,7 @@ exports.getById = async (req, res, next) => {
   } catch (error) {
     console.log(id);
     console.error("ERROR: ", error);
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
 
@@ -93,7 +93,7 @@ exports.getByQuizId = async (req, res) => {
     return res.status(200).json({ questions });
   } catch (error) {
     console.error("ERROR: ", error);
-    return res.status(503).json({ message: "Lỗi dịch vụ, thử lại sau" });
+    return res.status(503).json({ message: "Service error, try again later" });
   }
 };
 
@@ -109,7 +109,7 @@ exports.deleteById = async (req, res) => {
     console.error("DELETE ERROR: ", error);
     return res
       .status(503)
-      .json({ message: "Eror, can not delete this question" });
+      .json({ message: "Error, can not delete this question" });
   }
 };
 
@@ -125,6 +125,6 @@ exports.deleteByListenId = async (req, res) => {
     console.error("GET WORD DETAILS ERROR: ", error);
     return res
       .status(503)
-      .json({ message: "Eror, can not delete this question" });
+      .json({ message: "Error, can not delete this question" });
   }
 };
