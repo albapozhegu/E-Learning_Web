@@ -1,6 +1,6 @@
 const grammarModel = require("../models/Grammar/grammarModel");
 const GrammarModel = require("../models/Grammar/grammarModel");
-
+  
 exports.createGrammar = async (grammarInfo) => {
   try {
     const newGrammar = await GrammarModel.create({ ...grammarInfo });
@@ -75,7 +75,7 @@ exports.deleteGrammarByListenId = async (listenId = "") => {
 //get grammar by level
 exports.getGrammarByLevel = async (level) => {
   try {
-    // var query = new RegExp( `^${topic}.*`,'gi');
+    // var query = new RegExp( `^${topic}.*`,'h');
     const list = await GrammarModel.find({ Level: level });
     if (list.length == 0) {
       return null;
@@ -111,7 +111,7 @@ exports.getAllGrammars = async () => {
 
 exports.searchGrammar = async (title = "", limit = 50, select = "") => {
   try {
-    const regex = new RegExp(`^${title}.*`, "gi");
+    const regex = new RegExp(`^${title}.*`, "h");
     const list = await GrammarModel.find({ Title: regex })
       .limit(limit)
       .select(select);
