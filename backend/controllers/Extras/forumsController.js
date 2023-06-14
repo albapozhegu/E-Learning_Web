@@ -9,7 +9,7 @@ exports.addForum = async(req, res) => {
         }
         const newForum = await ForumModel.create(forumInfo)
         if (newForum) {
-            return res.status(200).json({ message: 'Success' })
+            return res.status(200).json({ message: 'success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Could not create blog' })
@@ -32,7 +32,7 @@ exports.updateForum = async(req, res) => {
     try {
         const update = await ForumModel.findByIdAndUpdate(id, { title, content })
         if (update) {
-            return res.status(200).json({ message: 'Success' })
+            return res.status(200).json({ message: 'success' })
         }
     } catch (error) {
         return res.status(500).json({ message: 'Operation failed' })
@@ -50,6 +50,6 @@ exports.deleteForum = async(req, res) => {
         console.error("DELETE ERROR: ", error);
         return res
             .status(503)
-            .json({ message: "Error, can not delete this question" });
+            .json({ message: "Eror, can not delete this question" });
     }
 }
