@@ -24,7 +24,7 @@ const {
 //create grammar
 exports.postGrammar = async (req, res) => {
   try {
-    const {Title, Video, Audio, Image, Script, Content, Level, Items}= req.body;
+    const {Title, Video, Audio, Image, Script, Content, Level, Items}= req.body;  
      //video
      let videoUrl = null;
      if (Video) {
