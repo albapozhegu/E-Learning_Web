@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+
 exports.authentication = (req, res, next) => {
   try {
     res.locals.isAuth = false;
