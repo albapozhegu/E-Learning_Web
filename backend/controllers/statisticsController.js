@@ -3,6 +3,7 @@ const Words = require("../models/wordModel");
 const Listens = require("../models/listeningModel");
 const Quizzes = require("../models/Quizzes/quizModel");
 const Grammars = require("../models/Grammar/grammarModel");
+const Blogs = require("../models/Blog/blogModel");
 exports.countUser = async (req, res) => {
   const count = await Users.countDocuments();
   return res.status(200).json({ count });
@@ -25,5 +26,10 @@ exports.countQuiz = async (req, res) => {
 
 exports.countGrammar = async (req, res) => {
   const count = await Grammars.countDocuments();
+  return res.status(200).json({ count });
+}
+
+exports.countBlog = async (req, res) => {
+  const count = await Blogs.countDocuments();
   return res.status(200).json({ count });
 }
