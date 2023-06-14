@@ -8,5 +8,4 @@ router.get('/get-fileTest-by-part',authentication, fileTestController.getByTestI
 router.post('/post-fileTest/:id', authentication, fileTestController.postFileTest);
 router.get('/get-questions-of-part', authentication, fileTestController.getQuestionsOfPart);
 router.get('/get-questions-of-file', authentication, fileTestController.getQuestionsOfFile);
-
 module.exports = router;
