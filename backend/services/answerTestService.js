@@ -31,5 +31,3 @@ exports.getAnswerTestById = async (_id = '') => {
       throw error;
     }
   };
-
-
