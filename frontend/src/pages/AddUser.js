@@ -52,7 +52,7 @@ const useStyle = makeStyles(() => ({
 
   avt: {
     borderRadius: "50%",
-    border: "2px solid var(--primary-color)",
+    border: "2px solid var(--primary-color)", 
   },
 
   cameraIconWrap: {
