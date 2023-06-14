@@ -3,7 +3,7 @@ const { ROLE_TYPES } = require('../constants');
 
 const roleTypeEnum = (function () {
   let list = [];
-  for (let k in ROLE_TYPES) {
+  for (let k in ROLE_TYPES) { 
     list.push(ROLE_TYPES[k]);
   }
   return list;
