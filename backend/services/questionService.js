@@ -11,7 +11,7 @@ exports.createQuestion = async (questionInfo ) => {
   } catch (error) {
     throw error;
   }
-};
+};  
 
 exports.updateQuestion = async (_id='', questionInfo ) => {
   try{
