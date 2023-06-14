@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const QuestionModel = new Schema({
   Content: {
     type: String,
-    required: true,
+    required: true, 
   },
 
   QuizId: {
