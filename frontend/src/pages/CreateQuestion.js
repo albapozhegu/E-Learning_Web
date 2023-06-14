@@ -66,7 +66,7 @@ const useStyle = makeStyles(() => ({
     color: "var(--accent-color) !important",
 
     "&:hover, &:active": {
-      filter: "brightness(0.85)",
+      filter: "brightness(0.85)", 
     },
   },
 
