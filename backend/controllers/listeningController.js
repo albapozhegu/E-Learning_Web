@@ -189,7 +189,7 @@ exports.getAll = async (req, res) => {
     return res.status(200).json({listens });
   } catch (error) {
     console.error('ERROR: ', error);
-    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+    return res.status(503).json({ message: 'Service error, try again later' });
   }
 };
 
@@ -200,7 +200,7 @@ exports.getTopics = async (req, res) => {
     return res.status(200).json({topics });
   } catch (error) {
     console.error('ERROR: ', error);
-    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+    return res.status(503).json({ message: 'Service error, try again later' });
   }
 };
 
@@ -232,4 +232,3 @@ exports.deleteListen = async (req, res) => {
     return res.status(503).json({ message: 'ERROR.' });
   }
 };
-
