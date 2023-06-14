@@ -7,7 +7,7 @@ wordApi.get('/get-all-word', authentication, wordController.getAllWords);
 wordApi.post('/post-word',authentication, wordController.postContributeWord);
 wordApi.put('/put-word/:id',authentication, wordController.putContributeWord);
 wordApi.delete('/delete-word', authentication, wordController.deleteWord);
-wordApi.get('/exist-word',authentication, wordController.getCheckWordExistence);
+wordApi.get('/exist-word',authentication, wordController.getCheckWordExistence); 
 wordApi.get('/get-word-pack',authentication, wordController.getWordPack);
 wordApi.get('/search-word',authentication, wordController.getSearchWord);
 wordApi.get('/get-word-details',authentication, wordController.getWordDetails);
