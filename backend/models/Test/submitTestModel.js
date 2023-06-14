@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
 const SubmitTestModel = new Schema({
+   
    Score: {
     type: Number,
     default: 0,
