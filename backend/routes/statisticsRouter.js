@@ -8,4 +8,5 @@ router.get('/count-word', authentication, checkAdmin, statisticsController.count
 router.get('/count-listening', authentication, checkAdmin, statisticsController.countListening);
 router.get('/count-quiz', authentication, checkAdmin, statisticsController.countQuiz);
 router.get('/count-grammar', authentication, checkAdmin, statisticsController.countGrammar);
-module.exports = router;
+
+module.exports = router;  
