@@ -6,5 +6,4 @@ router.get('/get-answerTest-by-question/:id', authentication, answerTestControll
 router.get('/get-answerTest-by-id/:id',authentication, answerTestController.getById);
 router.post('/post-answerTest/:id', authentication, answerTestController.postAnswer);
 router.post('/post-many-answerTest/:id', authentication, answerTestController.postManyAnswers);
-
 module.exports = router;
