@@ -7,7 +7,7 @@ const useStyle = makeStyles(() => ({
     margin: "3.2rem 0",
   },
 }));
-
+ 
 function AddWordPage() {
   const classes = useStyle();
 
