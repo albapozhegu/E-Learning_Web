@@ -24,8 +24,7 @@ router.get(
   "/get-all-users",
   authentication,
   checkAdmin,
-  userController.getAllUsers
-
+  userController.getAllUsers  
 );
 router.get(
   "/get-user-details/:user_id",
@@ -68,4 +67,5 @@ router.get(
  
   userController.getTopCoin
 );
+
 module.exports = router;
