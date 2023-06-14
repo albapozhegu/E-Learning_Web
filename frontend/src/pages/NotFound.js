@@ -12,7 +12,7 @@ function NotFoundPage() {
   return (
     <div className="not-found">
       {arrBubble.map((_, key) => (
-        <div key={key} className="not-found-bubble"></div>
+        <div key={key} className="not-found-bubble"></div> 
       ))}
 
       <div className="not-found-main">
