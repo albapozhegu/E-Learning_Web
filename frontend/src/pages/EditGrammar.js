@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyle = makeStyles(() => ({
   root: {
     margin: "3.2rem 0",
-  },
+  }, 
 }));
 function EditGrammarPage() {
   const classes = useStyle();
