@@ -53,4 +53,4 @@ Node.js - JavaScript runtime
 Bootstrap - Front-end CSS framework
 
 # Contributing
-Contributions are welcome! Please see CONTRIBUTING.md for details.
+Contributions are welcome! :)
