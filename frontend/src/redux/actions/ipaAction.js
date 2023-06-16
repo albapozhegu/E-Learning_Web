@@ -106,5 +106,4 @@ export const postIPA = (formData) => {
           })
       }
     }
-};
-
+};  
