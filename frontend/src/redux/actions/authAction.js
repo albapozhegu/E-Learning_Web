@@ -28,4 +28,4 @@ export const setUserCoin = (newCoin)  => {
     type: USER_CONSTANT.SET_USER_COIN,
     payload: newCoin,
   }
-}
+}   
