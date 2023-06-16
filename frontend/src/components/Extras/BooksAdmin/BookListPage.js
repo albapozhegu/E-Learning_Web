@@ -18,7 +18,8 @@ export default function BookListPage() {
 useEffect(()=>{
     (async function () {
         const res = await bookApi.getbook()
-        setData(res.data);
+        console.log(res.data)
+        setData(res.data.books);
       })();
       return () => {};
 },[]);
@@ -34,10 +35,11 @@ useEffect(()=>{
       </div>
       <div className="english-break"></div>
       <Grid container spacing={3}>
-        {[1,2].map((ann, index) => (
+        {data.map((ann, index) => (
           <Grid item xs={12} md={6} key={index}>
             
               <div>
+                
                 <AnnouncementCard id='' title={ann.title} content={ann.content}/>
               </div>
             
