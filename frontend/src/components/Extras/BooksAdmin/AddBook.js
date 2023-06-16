@@ -7,16 +7,18 @@ import useTitle from "hooks/useTitle";
 import InputCustom from "components/UI/InputCustom";
 import * as yup from "yup";
 import SaveIcon from "@material-ui/icons/Save";
-import CameraIcon from "@material-ui/icons/PhotoCamera";
-import { convertImageToBase64 } from "helper/index";
-
+import { useDispatch } from "react-redux";
+import { setMessage } from "redux/actions/messageAction";
+import { convertImageToBase64 } from "helper";
+import {useHistory} from 'react-router-dom'
 import LoopIcon from "@material-ui/icons/Loop";
+import bookApi from 'apis/Extras/booksApi';
 
 //-------------------------------------------------------------------------------------------------------------------
 const useStyle = makeStyles(() => ({
   wrap: {
     minHeight: "calc(100vh - 7.2rem)",
-    width: 500
+    width: 'auto'
   },
 
   root: {
@@ -25,7 +27,7 @@ const useStyle = makeStyles(() => ({
     borderRadius: "var(--border-radius)",
     textAlign: "center",
     boxShadow: "var(--box-shadow)",
-    width: 450
+    width: '80%'
   },
 
   avtWrap: {
@@ -33,8 +35,10 @@ const useStyle = makeStyles(() => ({
     height: "15rem",
     position: "relative",
   },
-
   avt: {
+
+  },
+  avti: {
     borderRadius: "50%",
     border: "2px solid var(--primary-color)",
   },
@@ -126,114 +130,214 @@ const useStyle = makeStyles(() => ({
   },
 }));
 const schema = yup.object().shape({
-  title: yup.string().required('Title is required'),
-  content: yup.string().required('Content is required')
+  title: yup.string().required('Book title is required'),
+  description: yup.string().required('Description is required'),
+  price: yup.number().required('Price is required'),
+  authour: yup.string().required('Authour name is required').min(3),
+
+
 });
 export default function AddBook() {
   useTitle("Add Book");
-  const defaultImg =
-    "https://res.cloudinary.com/phongvn2611/image/upload/v1634179173/english/avatar/avatar-default_tx5lsb.png";
+
+  const defaultImg = `${process.env.REACT_APP_DEFAULT_BOOK_COVER}`
+
+
+  const [image, setImage] = useState(defaultImg);
+
+  const [cover, setCover]=useState(null);
   const [submitting, setSubmitting] = useState(false);
-  const [avatar, setAvatar] = useState(defaultImg);
+  const dispatch = useDispatch();
+
+  const history=useHistory()
+
   const classes = useStyle();
 
 
-  const handleAddBook = () => {
+  const handleAddbook = async(vals) => {
+    console.log(vals)
+    const { 
+      title,
+      price,
+      description,
+      authour } = vals;
 
-  }
-
-  const handleChange = () => {
-
-  }
-  const handleChangeAvatar = (e) => {
-    e.preventDefault();
-    try {
-      const file = e.target.files[0];
-      if (!file) {
-      //  dispatch(setMessage("No files were uploaded", "errors"));
-      }
-      if (file.size / 1024 ** 2 > 2) {
-       // dispatch(setMessage("Size too large", "errors"));
-      }
-      convertImageToBase64(file).then((res) => {
-        setAvatar(res);
-      });
-    } catch (err) {
-      throw err;
+    const fd = new FormData();
+    fd.append('title', title)
+    fd.append('price', price)
+    fd.append('description', description)
+    fd.append('authour', authour)
+    if(cover!==null){
+      fd.append('cover', cover)
+    }else{
+       fd.append('cover', image)
     }
-  };
+   
+
+      try {
+        const req = await bookApi.createbook(fd)
+        if(req.status===200){
+          console.log(req.data)
+          dispatch(setMessage(req.data.message||"Operation successful", "success"));
+          history.push('/admin/books')
+        }
+      } catch (error) {
+        const r = error&&error?.response
+        console.log(r)
+         dispatch(setMessage(r.data.message||"Something went wrong", "error"));
+      }
+  }
+
   const {
-    createAnnouncement,
+    register,
+    handleChange,
     handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
+
+
+
+
+  const handleChangePicture = (e) => {
+    e.preventDefault();
+    try {
+      const file = e.target.files[0];
+      if (!file) {
+        dispatch(setMessage("No files were uploaded", "error"));
+      }
+      if (file.size / 1024 ** 2 > 2) {
+        dispatch(setMessage("Size too large", "error"));
+      }
+      convertImageToBase64(file).then((res) => {
+        setImage(res);
+      });
+      setCover(file)
+    } catch (err) {
+      throw err;
+    }
+  };
+
+
+  
   return (
     <>
       <div className={`${classes.wrap} container flex-center`}>
         <div className={classes.root}>
-          <form autoComplete="off" onSubmit={handleSubmit(handleAddBook)}>
+          <form autoComplete="off" onSubmit={handleSubmit(handleAddbook)}>
+
 
             <Grid container direction='column' spacing={3}>
               <Grid item>
                 <Typography>Add Book</Typography>
               </Grid>
-              <Grid item>
-                <InputCustom
-                  label="Title"
-                  size="small"
-                  placeholder="Enter Title"
-                  error={Boolean(errors.title)}
-                  onChange={handleChange}
-                  fullWidth
-                />
-              </Grid>
-              <Grid item>
-                <InputCustom
-                  label="Authour"
-                  size="small"
-                  placeholder="Enter Authour"
-                  error={Boolean(errors.content)}
-                  onChange={handleChange}
-
-                  fullWidth
-                />
-              </Grid>
-              <Grid item>
-                <Typography>Upload Attachment</Typography>
-                <div className="flex-center w-100 h-100">
-                  <div className={classes.avtWrap}>
-                    <img
-                      src={avatar ? avatar : defaultImg}
-                      alt=""
-                      className={`${classes.avt} w-100 h-100`}
+              <Grid item container alignContent="center">
+                <div className={classes.avtWrap}>
+                  <img
+                    src={image ? image : defaultImg}
+                    alt=""
+                    className={`${classes.avt} w-100 h-100`}
+                  />
+                  <div className={`${classes.cameraIconWrap} flex-center`}>
+                    <input
+                      type="file"
+                      className={classes.fileInput}
+                      onChange={handleChangePicture}
+                      accept="image/*"
                     />
-                    <div className={`${classes.cameraIconWrap} flex-center`}>
-                      <CameraIcon className={classes.cameraIcon} />
-                      <input
-                        type="file"
-                        className={classes.fileInput}
-                        accept="image/*"
-                        onChange={handleChangeAvatar}
-                      />
-                    </div>
                   </div>
                 </div>
               </Grid>
               <Grid item>
-                <Button
-                  type="submit"
-                  className={`${classes.editBtn} _btn _btn-primary w-100`}
-                  disabled={submitting}
-                  endIcon={
-                    submitting ? <LoopIcon className="ani-spin" /> : <SaveIcon />
-                  }
-                  variant="contained"
-                >
-                  Save
-                </Button>
+                <InputCustom
+                  label="Title"
+                  size="small"
+                  inputProps={{
+                    name: "title",
+                    ...register("title"),
+                  }}
+                  placeholder="Enter Book Title"
+                  error={Boolean(errors.title)}
+                  onChange={handleChange}
+                  fullWidth
 
+                />
+                {errors.title && (
+                  <p className="text-error">{errors.title?.message}</p>
+                )}
+              </Grid>
+              <Grid item container spacing={2}>
+                <Grid item xs={6}>
+                  <InputCustom
+                    label="Authour"
+                    size="small"
+                    inputProps={{
+                      name: "authour",
+                      ...register("authour"),
+                    }}
+                    placeholder="Enter Authour Name"
+                    error={Boolean(errors.authour)}
+                    onChange={handleChange}
+                    fullWidth
+                  />
+                  {errors.authour && (
+                    <p className="text-error">{errors.authour?.message}</p>
+                  )}
+                </Grid>
+                <Grid item xs={6}>
+                  <InputCustom
+                    label="Price"
+                    size="small"
+                    type='number'
+                    inputProps={{
+                      name: "price",
+                      ...register("price"),
+                    }}
+                    placeholder="Enter Price"
+                    error={Boolean(errors.price)}
+                    onChange={handleChange}
+                    fullWidth
+                  />
+                  {errors.price && (
+                    <p className="text-error">{errors.price?.message}</p>
+                  )}
+                </Grid>
+              </Grid>
+              <Grid item>
+                <InputCustom
+                  label="description"
+                  size="small"
+                  inputProps={{
+                    name: "description",
+                    ...register("description"),
+                  }}
+                  placeholder="Enter Description"
+                  error={Boolean(errors.description)}
+                  onChange={handleChange}
+                  multiline
+                  minRows={5}
+                  fullWidth
+                />
+                {errors.description && (
+                  <p className="text-error">{errors.description?.message}</p>
+                )}
+              </Grid>
+              <Grid item container direction='row-reverse'>
+                <Grid item xs={4}>
+                  <Button
+                    type="submit"
+
+                    className={`${classes.editBtn} _btn _btn-primary w-100`}
+                    disabled={submitting}
+                    endIcon={
+                      submitting ? <LoopIcon className="ani-spin" /> : <SaveIcon />
+                    }
+                    variant="contained"
+                  >
+                    Save
+                  </Button>
+                </Grid>
               </Grid>
             </Grid>
           </form>
