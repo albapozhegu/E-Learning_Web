@@ -1,6 +1,6 @@
 import academyIcon from 'assets/icons/topics/academy.png';
 import animalIcon from 'assets/icons/topics/animal.png';
-import bodyIcon from 'assets/icons/topics/body.png';
+import bodyIcon from 'assets/icons/topics/body.png';   
 import colorIcon from 'assets/icons/topics/color.png';
 import cultureIcon from 'assets/icons/topics/culture.png';
 import entertainmentIcon from 'assets/icons/topics/entertainment.png';
