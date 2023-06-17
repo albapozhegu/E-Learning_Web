@@ -18,7 +18,7 @@ const {
   getWordByTopic,
   getWordTopics,
  
-} = require('../services/wordService');  
+} = require('../services/wordService');   
 
 //create word
 exports.postContributeWord = async (req, res, next) => {
