@@ -10,7 +10,7 @@ exports.getTotalWordPack = async (req, res, next) => {
   }
 };  
 
-exports.getTotalWordPackTopic = async (req, res, next) => {
+exports.getTotalWordPackTopic = async (req, res, next) => { 
   try {
     const { packInfo } = req.query;
     const total = (await countWordPackTopic(JSON.parse(packInfo))) || 0;
