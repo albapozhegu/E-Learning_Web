@@ -31,7 +31,7 @@ const GAME_LIST = [
     imgUrl: wordMatchingIcon,
     to: ROUTES.GAMES_WORD_MATCHING,
   },
-  {
+  {   
     title: 'Hands are faster than brains',
     subTitle:
       'Choose an image that matches the given word in the fastest time',
