@@ -9,7 +9,7 @@ exports.createSubmitTest = async (body) => {
 
     if (newSubmit) {
       return newSubmit;
-    }
+    } 
     return null;
   } catch (error) {
     throw error;
