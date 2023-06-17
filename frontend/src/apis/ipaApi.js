@@ -23,4 +23,4 @@ const ipaApi = {
 
 }
 
-export default ipaApi;
+export default ipaApi;  
