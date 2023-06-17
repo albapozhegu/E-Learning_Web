@@ -7,7 +7,7 @@ const WordModel = new Schema({
   word: {
     type: String,
     required: true,
-    trim: true,
+    trim: true, 
     maxLength: 50,
   },
 
