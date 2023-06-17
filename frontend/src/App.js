@@ -17,7 +17,7 @@ import {
 } from "react-router-dom";
 import { Element } from "react-scroll";
 import userApi from "./apis/userApi";
-import Sidebar from "components/Sidebar";
+import Sidebar from "components/Sidebar"; 
 import { getUserInfo } from "./redux/actions/authAction";
 const { routes, routesAdmin, renderRoutes } = routerConfig;
 
