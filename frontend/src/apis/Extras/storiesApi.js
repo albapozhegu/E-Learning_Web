@@ -14,4 +14,4 @@ const storiesApi ={
         return axios.get(`${URL}/post-stories`,{ createdBy, content })
     }
 }
-export default storiesApi
+export default storiesApi  
