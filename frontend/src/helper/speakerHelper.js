@@ -25,7 +25,7 @@ export const playSoundAnswer = (
   word = '',
   isCorrect = true,
   voice,
-  volume = 1,
+  volume = 1, 
   speed = 1,
   speakDelay = 1000,
 ) => {
