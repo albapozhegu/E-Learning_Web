@@ -9,4 +9,4 @@ const testApi = {
     return axios.get(`${URL}/get-test-by-id/${id}`)
   }
 }
-export default testApi;
+export default testApi;  
