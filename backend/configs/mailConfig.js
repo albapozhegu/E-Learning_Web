@@ -19,7 +19,7 @@ const activationEmail = (url) => {
 };
 
 const resetPasswordMail = (url) => {
-  return `
+  return ` 
   <div style="max-width: 700px; margin: auto; border: 10px solid #999; padding: 20px; font-size: 110%; text-align: center">
   <img style="display: block; width: 200px; height: 200px; margin: 0 auto;" src="https://res.cloudinary.com/phongvn2611/image/upload/v1634738823/english/avatar/website-logo-small_uqfxjx.png" />
   <h2 style="text-transform: uppercase; color: #68c2e8;">Reset your password</h2>
