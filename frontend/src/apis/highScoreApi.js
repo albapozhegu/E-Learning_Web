@@ -14,5 +14,5 @@ const highscoreApi = {
     return axios.get(`${URL}/leaderboard`, { params: { name } });
   },
 };
-
+  
 export default highscoreApi;
