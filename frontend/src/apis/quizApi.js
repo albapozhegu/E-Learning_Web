@@ -1,7 +1,7 @@
 import axios from "axios";
 const URL = `/api/quiz`;
 
-const quizApi = {
+const quizApi = {  
   getQuiz: (id, token) => {
     return axios.get(`${URL}/get-quiz-by-id/${id}`, {
       headers: { Authorization: token },
