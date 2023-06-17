@@ -15,7 +15,7 @@ exports.createQuestion = async (questionInfo ) => {
 
 exports.updateQuestion = async (_id='', questionInfo ) => {
   try{
-   const updateQuestion= await QuestionModel.findByIdAndUpdate(_id, { ...questionInfo});
+   const updateQuestion= await QuestionModel.findByIdAndUpdate(_id, { ...questionInfo}); 
    if (updateQuestion) {
     return updateQuestion;
   }
