@@ -15,7 +15,7 @@ exports.createListen = async (listeningInfo) => {
 
 exports.updateListen = async (_id = "", listeningInfo) => {
   try {
-    const listen = await ListeningModel.findByIdAndUpdate(_id, listeningInfo);
+    const listen = await ListeningModel.findByIdAndUpdate(_id, listeningInfo); 
     if (listen) {
       return listen;
     }
