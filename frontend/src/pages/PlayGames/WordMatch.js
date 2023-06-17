@@ -9,5 +9,5 @@ function WordMatchGamePage() {
 
   return <WordMatchGameData />;
 }
-
+   
 export default WordMatchGamePage;
