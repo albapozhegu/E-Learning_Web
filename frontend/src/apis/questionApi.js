@@ -9,7 +9,7 @@ const questionApi = {
   getQuestionByQuiz: (id, token) => {
     return axios.get(`${URL}/get-question-by-quiz/${id}`)
   },
-
+ 
   postQuestion: (id, question) => {
     return axios.post(`${URL}/post-question-by-quiz/${id}`, {...question})
   },
