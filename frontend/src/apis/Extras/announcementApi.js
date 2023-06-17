@@ -14,4 +14,4 @@ const announcementsApi ={
         return axios.get(`${URL}/post-announcement`,{title,content})
     }
 }
-export default announcementsApi  
+export default announcementsApi   
