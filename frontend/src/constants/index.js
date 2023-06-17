@@ -6,7 +6,7 @@ export const COLOR_VAR_KEYS = [
   { key: '--bg-color-sec', label: 'Background secondary' },
   { key: '--bg-color-accent', label: 'Background accent' },
   { key: '--hover-color', label: 'Hover color' },
-  { key: '--title-color', label: 'Title' },
+  { key: '--title-color', label: 'Title' },  
   { key: '--text-color', label: 'Text' },
   { key: '--phonetic-color', label: 'Phonetic' },
 ];
