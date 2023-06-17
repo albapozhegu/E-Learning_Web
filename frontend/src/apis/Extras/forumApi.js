@@ -14,4 +14,4 @@ const forumApi ={
         return axios.get(`${URL}/post-forum`,{title, content })
     }
 }
-export default forumApi   
+export default forumApi    
