@@ -16,7 +16,7 @@ exports.createGrammar = async (grammarInfo) => {
 
 exports.updateGrammar = async (_id = "", grammarInfo) => {
   try {
-    const grammar = await grammarModel.findByIdAndUpdate(_id, grammarInfo);
+    const grammar = await grammarModel.findByIdAndUpdate(_id, grammarInfo); 
     if (grammar) {
       return grammar;
     }
