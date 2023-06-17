@@ -76,4 +76,4 @@ const wordApi = {
   },
 }
 
-export default wordApi;
+export default wordApi;  
