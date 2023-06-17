@@ -18,3 +18,4 @@ wordApi.get('/get-word-topic-gallery',authentication, wordController.getWordTopi
 wordApi.get('/get-word-by-word',authentication, wordController.getWordByWord);
 
 module.exports = wordApi;
+ 
