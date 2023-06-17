@@ -29,4 +29,4 @@ function useSpeaker() {
   return { speed, volume, voice };
 }
 
-export default useSpeaker;
+export default useSpeaker;  
