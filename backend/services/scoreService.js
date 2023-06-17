@@ -21,7 +21,7 @@ exports.createScoreRead = async (body) => {
       if (newResult) {
         return newResult;
       }
-      return null;
+      return null; 
     } catch (error) {
       throw error;
     }
