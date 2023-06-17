@@ -8,7 +8,7 @@ const useStyle = makeStyles(() => ({
   }, 
 }));
 function EditGrammarPage() {
-  const classes = useStyle();
+  const classes = useStyle(); 
   return (
     <div className="container">
       <div className={classes.root}>
