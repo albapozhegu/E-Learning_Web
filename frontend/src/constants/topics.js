@@ -11,7 +11,7 @@ import healthIcon from 'assets/icons/topics/health.png';
 import hobbyIcon from 'assets/icons/topics/hobby.png';
 import jobIcon from 'assets/icons/topics/job.png';
 import othersIcon from 'assets/icons/topics/others.png';
-import skillIcon from 'assets/icons/topics/skill.png';
+import skillIcon from 'assets/icons/topics/skill.png'; 
 import socialIcon from 'assets/icons/topics/social.png';
 import spiritualityIcon from 'assets/icons/topics/spirituality.png';
 import sportIcon from 'assets/icons/topics/sport.png';
