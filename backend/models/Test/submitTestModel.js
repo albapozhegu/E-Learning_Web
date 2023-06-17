@@ -8,7 +8,7 @@ const SubmitTestModel = new Schema({
   },
 
   ListenScore: {
-    type: Number,
+    type: Number, 
     default: 0,
   },
 
