@@ -6,7 +6,7 @@ import ResetPasswordPage from "../pages/ResetPassword";
 import LogoutPage from "../pages/Logout";
 import WelcomePage from "../pages/Welcome";
 import NotFoundPage from "../pages/NotFound";
-
+   
 const HomePage = React.lazy(() => import("../pages/Home"));
 const RegisterPage = React.lazy(() => import("../pages/Register"));
 const LoginPage = React.lazy(() => import("../pages/Login"));
