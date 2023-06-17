@@ -11,4 +11,4 @@ function CorrectWordPage() {
   return <CorrectWordData />;
 }
 
-export default CorrectWordPage;
+export default CorrectWordPage;  
