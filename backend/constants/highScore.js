@@ -6,7 +6,7 @@ exports.HIGHSCORE_NAME = {
     CORRECT_GAME_RIGHT: {
       name: 'correct-right',
       unit: 'câu',
-    },
+    }, 
     CORRECT_GAME_RIGHT_CONSECUTIVE: {
       name: 'correct-right-consecutive',
       unit: 'câu',
