@@ -1,5 +1,5 @@
 # E-learning App with MERN Stack
-This is an E-learning app built with the MEVN stack, which stands for MongoDB, Express.js, React.js, and Node.js. The app allows users to browse, enroll and participate in courses, take quizzes and track their progress.
+This is an E-learning app built with the MERN stack, which stands for MongoDB, Express.js, React.js, and Node.js. The app allows users to browse, enroll and participate in courses, take quizzes and track their progress.
 
 # Table of Contents
 Getting Started
