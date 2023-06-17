@@ -3,4 +3,4 @@ export const HIGHSCORE_NAME = {
   CORRECT_WORD: 'correct-word',
   WORD_MATCH: 'word-match',
   FAST_GAME: 'fast-game',
-};
+};   
