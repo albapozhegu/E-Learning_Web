@@ -5,7 +5,7 @@ export const onPlayAudio = (audioSrc) => {
   const audio = new Audio(audioSrc);
   audio.play();
 };
-
+   
 // speak a text
 export const onTextToSpeech = (text = '', voice, speed = 1, volume = 1) => {
   let speech = new SpeechSynthesisUtterance();
