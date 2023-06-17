@@ -8,7 +8,7 @@ exports.createFileTest = async (body) => {
       return newFileTest;
     }
     return null;
-  } catch (error) {
+  } catch (error) { 
     throw error;
   }
 };
