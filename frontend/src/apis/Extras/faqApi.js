@@ -14,4 +14,4 @@ const faqApi ={
         return axios.get(`${URL}/post-faq`,{ question,answer})
     }
 }
-export default faqApi
+export default faqApi   
