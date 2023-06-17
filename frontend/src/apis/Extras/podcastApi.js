@@ -14,4 +14,4 @@ const podcastApi ={
         return axios.get(`${URL}/post-podcast`,{ title, file, duration, authour })
     }
 }
-export default podcastApi
+export default podcastApi   
