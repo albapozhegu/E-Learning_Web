@@ -9,7 +9,7 @@ exports.updateTop = async (accountId, name, score) => {
     let unit = "";
     for (let key in HIGHSCORE_NAME) {
       if (HIGHSCORE_NAME[key].name === name) {
-        unit = HIGHSCORE_NAME[key].unit;
+        unit = HIGHSCORE_NAME[key].unit; 
         break;
       }
     }
