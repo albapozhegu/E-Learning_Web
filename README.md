@@ -47,7 +47,7 @@ You can track your progress by clicking on the "Progress" link in the navigation
 
 # Built With
 MongoDB - NoSQL database  
-MySQL - SQL database
+MySQL - SQL database  
 Express.js - Node.js web framework  
 React.js - Front-end JavaScript framework  
 Node.js - JavaScript runtime  
