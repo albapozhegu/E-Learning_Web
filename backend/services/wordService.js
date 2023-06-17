@@ -16,7 +16,7 @@ exports.createNewWord = async (wordInfo) => {
 
 exports.updateWord = async (_id = "", wordInfo) => {
   try {
-    const updateWord = await WordModel.findByIdAndUpdate(_id, wordInfo);
+    const updateWord = await WordModel.findByIdAndUpdate(_id, wordInfo); 
 
     if (updateWord) {
       return updateWord;
