@@ -7,7 +7,7 @@ const roleTypeEnum = (function () {
     list.push(ROLE_TYPES[k]);
   }
   return list;
-})();
+})(); 
 
 const userSchema = new mongoose.Schema({
   
