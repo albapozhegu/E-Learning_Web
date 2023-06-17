@@ -14,3 +14,4 @@ function useTitle(title = 'English Website', isOverride = false) {
 }
 
 export default useTitle;
+   
