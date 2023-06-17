@@ -16,6 +16,9 @@ const statisticsApi = {
   countGrammar: () => {
     return axios.get(`${URL}/count-grammar`);
   },
+  countBlog: () => {
+    return axios.get(`${URL}/count-blog`);
+  },
 };
 
-export default statisticsApi;
+export default statisticsApi;  
