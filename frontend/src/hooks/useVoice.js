@@ -17,4 +17,4 @@ function useVoice() {
   return null;
 }
 
-export default useVoice;
+export default useVoice;   
