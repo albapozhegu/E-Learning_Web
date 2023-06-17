@@ -1,6 +1,6 @@
 import axios from "axios";
 const URL = `/api/games`;
-
+  
 const gameApi = {
    // correct word game
    getWordPackCWG: (
