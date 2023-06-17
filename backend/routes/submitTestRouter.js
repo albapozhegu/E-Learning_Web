@@ -10,4 +10,4 @@ router.put('/put-answer-submitTest/:id', authentication, submitTestController.pu
 router.get('/check-submitTest/:id', authentication, submitTestController.checkSubmitExist);
 router.delete('/delete-submitTest/:id', authentication, submitTestController.deleteById);
 
-module.exports = router;
+module.exports = router; 
